@@ -6,62 +6,25 @@
 
 /* base
 // -------------------------------------------- */
-// @import "./base/scrollbar";
 @import "./base/fonts";
 @import "./base/tags";
 @import "../icomoon/style.css";
-
-@import "./base/transitions";
-@import "./base/animations";
-@import "./base/styleguide";
 
 @tailwind components;
 
 /* objects
 // -------------------------------------------- */
-@import "./objects/headings";
-@import "./objects/wysiwyg";
-@import "./objects/btn";
-@import "./objects/btn-bordered";
-@import "./objects/link";
-@import "./objects/link-underline";
-@import "./objects/link-decoration";
-@import "./objects/link-jump";
-@import "./objects/surtitles";
-@import "./objects/list";
-@import "./objects/badge";
-@import "./objects/form";
-@import "./objects/custom-cursor";
 @import "./objects/scrollbar";
 
 /* components
 // -------------------------------------------- */
 
-// @import "./components/accordions";
-// @import "./components/tabs";
-// @import "./components/modal";
-
-// @import "./components/site-header";
-@import "./components/modal";
-@import "./components/navMobile";
-@import "./components/accordions";
-@import "./components/swiper";
-@import "./components/marquee";
-@import "./components/inputfile";
-@import "./components/consent-cookies";
-
 /* playground
 // -------------------------------------------- */
-@import "./playground/clip-path";
 
 /* vendors
 // -------------------------------------------- */
-@import "~hamburgers/_sass/hamburgers/hamburgers";
-@import "~aos/dist/aos.css";
-
 @import "./vendors/alpine";
-@import "./vendors/aos";
-@import "./vendors/reveal/aos.scss";
 
 /* utilities
 // -------------------------------------------- */

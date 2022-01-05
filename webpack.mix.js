@@ -8,9 +8,9 @@ mix.setPublicPath(publicPath)
   .js(`${srcPath}/scripts/main.js`, 'scripts')
   .sourceMaps()
   .sass(`${srcPath}/styles/main.scss`, 'styles')
-  // .copyDirectory(`${srcPath}/fonts`, `${publicPath}/fonts`)
-  // .copyDirectory(`${srcPath}/icons`, `${publicPath}/icons`)
-  // .copyDirectory(`${srcPath}/images`, `${publicPath}/images`)
+  .copyDirectory(`${srcPath}/fonts`, `${publicPath}/fonts`)
+  .copyDirectory(`${srcPath}/icons`, `${publicPath}/icons`)
+  .copyDirectory(`${srcPath}/images`, `${publicPath}/images`)
   .options({
     processCssUrls: false,
     postCss: [
@@ -30,27 +30,25 @@ mix.setPublicPath(publicPath)
   .extract()
   .version();
 
-// if (!mix.inProduction()) {
-//   mix.sourceMaps().browserSync({
-//     // proxy: process.env.BASE_URL,
-//     server: {
-//       baseDir: 'dist',
-//     },
-//     ghostMode: {
-//       clicks: false,
-//       scroll: true,
-//       forms: {
-//         submit: false,
-//         inputs: false,
-//         toggles: false,
-//       },
-//     },
-//     files: [
-//       'public/**/*.twig',
-//       'modules/**/*.php',
-//       'templates/**/*.twig',
-//       'translations/**/*.php',
-//       `${publicPath}/**/*.{js,vue,css}`,
-//     ],
-//   });
-// }
+if (!mix.inProduction()) {
+  mix.sourceMaps().browserSync({
+    // proxy: process.env.BASE_URL,
+    server: {
+      baseDir: 'docs',
+    },
+    ghostMode: {
+      clicks: false,
+      scroll: true,
+      forms: {
+        submit: false,
+        inputs: false,
+        toggles: false,
+      },
+    },
+    files: [
+      'docs/**/*.html',
+      'templates/**/*.twig',
+      `${publicPath}/**/*.{js,vue,css}`,
+    ],
+  });
+}
