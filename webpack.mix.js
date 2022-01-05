@@ -34,7 +34,7 @@ if (!mix.inProduction()) {
   mix.sourceMaps().browserSync({
     // proxy: process.env.BASE_URL,
     server: {
-      baseDir: './',
+      baseDir: 'docs',
     },
     ghostMode: {
       clicks: false,
