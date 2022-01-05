@@ -11,12 +11,7 @@ module.exports = {
     './assets/**/*.jsx',
     './assets/**/*.ts',
     './assets/**/*.vue',
-    './modules/**/*.php',
-    './modules/**/*.twig',
-    './templates/**/*.twig',
-    './templates/**/*.html',
-    './styleguide/**/*.twig',
-    './styleguide/**/*.html',
+    './docs/index.html',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {

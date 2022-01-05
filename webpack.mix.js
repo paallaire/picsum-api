@@ -2,7 +2,7 @@ const mix = require('laravel-mix');
 require('dotenv').config();
 
 const srcPath = 'assets';
-const publicPath = 'dist';
+const publicPath = 'docs/dist';
 
 mix.setPublicPath(publicPath)
   .js(`${srcPath}/scripts/main.js`, 'scripts')
@@ -47,7 +47,6 @@ if (!mix.inProduction()) {
     },
     files: [
       'docs/**/*.html',
-      'templates/**/*.twig',
       `${publicPath}/**/*.{js,vue,css}`,
     ],
   });
