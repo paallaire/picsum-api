@@ -5,13 +5,13 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 import Alpine from 'alpinejs';
-import modal from './alpine/modal';
+import picsumApi from './alpine/picsum-api';
 
 import debugInit from './debug/index';
 
 /* Alpine
 -------------------------------------------- */
-Alpine.data('modal', modal);
+Alpine.data('picsumApi', picsumApi);
 
 window.Alpine = Alpine;
 Alpine.start();

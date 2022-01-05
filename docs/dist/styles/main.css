@@ -886,6 +886,12 @@ body{
 .top-0{
 	top: 0;
 }
+.bottom-4{
+	bottom: 20px;
+}
+.right-4{
+	right: 20px;
+}
 .z-10{
 	z-index: 10;
 }
@@ -913,6 +919,9 @@ body{
 }
 .mt-1{
 	margin-top: 5px;
+}
+.mt-8{
+	margin-top: 40px;
 }
 .block{
 	display: block;
@@ -1037,6 +1046,17 @@ body{
 .border-transparent{
 	border-color: transparent;
 }
+.border-black\/50{
+	border-color: rgba(0, 0, 0, 0.5);
+}
+.border-gray-100{
+	--tw-border-opacity: 1;
+	border-color: rgba(243, 244, 246, var(--tw-border-opacity));
+}
+.border-gray-200{
+	--tw-border-opacity: 1;
+	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
 .bg-white{
 	--tw-bg-opacity: 1;
 	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -1060,6 +1080,14 @@ body{
 .bg-gray-200{
 	--tw-bg-opacity: 1;
 	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+.bg-indigo-300{
+	--tw-bg-opacity: 1;
+	background-color: rgba(165, 180, 252, var(--tw-bg-opacity));
+}
+.bg-indigo-900{
+	--tw-bg-opacity: 1;
+	background-color: rgba(49, 46, 129, var(--tw-bg-opacity));
 }
 .object-cover{
 	-o-object-fit: cover;
@@ -1127,6 +1155,12 @@ body{
 }
 .text-sm{
 	font-size: 0.875rem;
+}
+.text-30{
+	font-size: 3.75rem;
+}
+.text-20{
+	font-size: 2.5rem;
 }
 .font-medium{
 	font-weight: 500;
