@@ -1,0 +1,185 @@
+// Clip-path
+// ==========================================================================
+
+// section-clip-path
+// --------------------------------------------
+.section-clip-path {
+  .example-1 {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  }
+
+  .example-2 {
+    clip-path: inset(40px);
+  }
+
+  .example-3 {
+    clip-path: inset(100px 80px);
+  }
+
+  .example-4 {
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  .example-5 {
+    clip-path: circle(50% at 25% 50%);
+  }
+
+  .example-6 {
+    clip-path: circle(50% at 50% 25%);
+  }
+
+  .example-7 {
+    clip-path: circle(50% at 25% 25%);
+  }
+
+  .example-8 {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  .example-9 {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+
+  .example-10 {
+    clip-path: url("#triangle");
+  }
+
+  .example-11 {
+    clip-path: polygon(85% 35px, 100% 100%, 0px 75%, 0px 0px);
+  }
+}
+
+// section-transition-clip-path
+// --------------------------------------------
+.section-transition-clip-path {
+  counter-reset: section;
+
+  .example {
+    counter-increment: section;
+    @apply relative;
+    &:after {
+      content: counter(section);
+      @apply text-green-1 text-40 font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+  }
+
+  .example--image {
+    @apply transition-all duration-fast ease-in;
+  }
+
+  .example-1 {
+    .example--image {
+      clip-path: inset(0);
+    }
+
+    &:hover {
+      .example--image {
+        clip-path: inset(30%);
+      }
+    }
+  }
+
+  .example-2 {
+    .example--image {
+      clip-path: circle(100% at 50% 50%);
+    }
+
+    &:hover {
+      .example--image {
+        clip-path: circle(25% at 50% 50%);
+      }
+    }
+  }
+
+  .example-3 {
+    .example--image {
+      clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+    }
+
+    &:hover {
+      .example--image {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+  }
+
+  .example-4 {
+    .example--image {
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+
+    &:hover {
+      .example--image {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+  }
+
+  .example-5 {
+    .example--image {
+      clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+    }
+
+    &:hover {
+      .example--image {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+  }
+
+  .example-6 {
+    .example--image {
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    &:hover {
+      .example--image {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+  }
+}
+
+// section-button-clip-path
+// --------------------------------------------
+.section-button-clip-path {
+  .button {
+    position: relative;
+
+    appearance: none;
+    display: inline-block;
+    margin-top: 3rem;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: #673ab7;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    padding: 0.65rem 2rem;
+    border-radius: 100px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .button span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.1;
+    clip-path: circle(0 at center);
+    transition: 0.3s ease-out;
+  }
+
+  .button:hover:before {
+    clip-path: circle(100px at center);
+  }
+}
