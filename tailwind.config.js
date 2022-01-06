@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 // tailwind.config.js
 const defaultTheme = require('tailwindcss/defaultTheme');
-const spacingUnits = require('./assets/tailwindcss/units/generateUnitByMultiplicator')(5, 100);
+const spacingUnits = require('./assets/tailwindcss/units/generateUnitByMultiplicator')(4, 100);
 const fontSizeUnit = require('./assets/tailwindcss/units/generateUnitByMultiplicator')(2, 50);
 
 module.exports = {
@@ -91,15 +91,6 @@ module.exports = {
       '11/12': '91.666667%',
       ...spacingUnits,
       ...defaultTheme.width,
-    },
-    fontSize: {
-      xs: '12px',
-      sm: '14px',
-      base: '16px',
-      md: '18px',
-      lg: '20px',
-      xl: '24px',
-      ...fontSizeUnit,
     },
     fontFamily: {
       inter: ['Inter', 'sans-serif'],
